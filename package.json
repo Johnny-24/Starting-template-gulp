@@ -9,10 +9,13 @@
     "author": "Johnny",
     "license": "ISC",
     "devDependencies": {
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3",
         "browser-sync": "^2.18.12",
         "del": "^3.0.0",
         "gulp": "github:gulpjs/gulp#4.0",
         "gulp-autoprefixer": "^4.0.0",
+        "gulp-babel": "^8.0.0",
         "gulp-cheerio": "^0.6.2",
         "gulp-concat": "^2.6.1",
         "gulp-csscomb": "^3.0.8",

@@ -4,4 +4,12 @@ $(document).ready(function() {
 
     // Polifill for IE objectFitImages
     objectFitImages();
+
+    const a = "Hello";
+
+    let b = () => {
+        console.log(`${a} Johnny!`);
+    };
+
+    b();
 });

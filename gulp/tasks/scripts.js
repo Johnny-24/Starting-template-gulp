@@ -3,11 +3,13 @@ module.exports = function() {
         return $.gulp
             .src([
                 "node_modules/svg4everybody/dist/svg4everybody.min.js",
-                "node_modules/object-fit-images/dist/ofi.min.js",
-                "node_modules/es6-promise/dist/es6-promise.min.js"
+                "node_modules/object-fit-images/dist/ofi.min.js"
             ])
+
             .pipe($.gp.concat("libs.min.js"))
+
             .pipe($.gulp.dest("./dev/html/assets/js/"))
+
             .pipe(
                 $.browserSync.reload({
                     stream: true
@@ -19,10 +21,10 @@ module.exports = function() {
         return $.gulp
             .src([
                 "node_modules/svg4everybody/dist/svg4everybody.min.js",
-                "node_modules/object-fit-images/dist/ofi.min.js",
-                "node_modules/es6-promise/dist/es6-promise.min.js"
+                "node_modules/object-fit-images/dist/ofi.min.js"
             ])
             .pipe($.gp.concat("libs.min.js"))
+
             .pipe($.gp.uglifyjs())
             .pipe($.gulp.dest("./dev/html/assets/js/"));
     });
@@ -33,7 +35,13 @@ module.exports = function() {
                 "./dev/src/assets/js/*.js",
                 "!./dev/src/assets/js/libs.min.js"
             ])
+            .pipe(
+                $.babel({
+                    presets: ["@babel/env"]
+                })
+            )
             .pipe($.gulp.dest("./dev/html/assets/js/"))
+
             .pipe(
                 $.browserSync.reload({
                     stream: true
