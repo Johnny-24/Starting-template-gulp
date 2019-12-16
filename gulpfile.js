@@ -26,8 +26,7 @@ $.gulp.task(
             "js:copy",
             "svg",
             "img:dev",
-            "fonts",
-            "svg:copy"
+            "fonts"
         )
     )
 );
@@ -43,8 +42,7 @@ $.gulp.task(
             "js:copy",
             "svg",
             "img:build",
-            "fonts",
-            "svg:copy"
+            "fonts"
         )
     )
 );
