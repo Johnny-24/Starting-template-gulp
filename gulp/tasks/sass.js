@@ -4,7 +4,8 @@ module.exports = function() {
             .src("./dev/src/assets/scss/main.scss")
             .pipe(
                 $.gp.sass({
-                    "include css": true
+                    "include css": true,
+                    outputStyle: "compressed"
                 })
             )
             .pipe(
@@ -12,6 +13,7 @@ module.exports = function() {
                     browsers: ["last 3 version"]
                 })
             )
+            .pipe($.gcmq())
             .pipe($.gp.csscomb())
             .pipe($.gp.csso())
             .pipe($.gulp.dest("./dev/html/assets/css/"));
