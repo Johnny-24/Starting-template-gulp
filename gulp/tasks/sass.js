@@ -2,6 +2,7 @@ module.exports = function() {
     $.gulp.task("sass:build", () => {
         return $.gulp
             .src("./dev/src/assets/scss/main.scss")
+            .pipe($.gp.sassGlob())
             .pipe(
                 $.gp.sass({
                     "include css": true,
@@ -22,6 +23,7 @@ module.exports = function() {
     $.gulp.task("sass:dev", () => {
         return $.gulp
             .src("./dev/src/assets/scss/main.scss")
+            .pipe($.gp.sassGlob())
             .pipe($.gp.sourcemaps.init())
             .pipe(
                 $.gp.sass({

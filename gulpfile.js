@@ -7,6 +7,7 @@ global.$ = {
     del: require("del"),
     fs: require("fs"),
     gcmq: require("gulp-group-css-media-queries"),
+    sassGlob: require("gulp-sass-glob"),
     browserSync: require("browser-sync").create(),
     gp: require("gulp-load-plugins")()
 };

@@ -1,12 +1,9 @@
-@import "utils/fonts.scss";
-@import "utils/media.scss";
-@import "utils/vars.scss";
-@import "utils/helpers.scss";
-@import "utils/mixins.scss";
-@import "vendors.scss";
-@import "components/components.scss";
+@import "utils/*.scss";
+@import "vendors/*.scss";
+@import "components/*.scss";
 //TODO: Change from normalize to reset
-//TODO: Check fonts
+//TODO: Add favicon
+//TODO: JS Modules
 
 body {
 	font-family: $Roboto;
