@@ -14,6 +14,9 @@ module.exports = function() {
             "./dev/src/assets/images/*.{png,jpg,gif,svg}",
             $.gulp.series("img:dev")
         );
-        $.gulp.watch("./dev/src/assets/fonts/**/*.*", $.gulp.series("fonts"));
+        $.gulp.watch(
+            "./dev/src/assets/fonts/**/*.*",
+            $.gulp.series("fonts", "fonts:woff2", "fonts:woff")
+        );
     });
 };

@@ -9,6 +9,8 @@ global.$ = {
     gcmq: require("gulp-group-css-media-queries"),
     sassGlob: require("gulp-sass-glob"),
     browserSync: require("browser-sync").create(),
+    ttf2woff: require("gulp-ttf2woff"),
+    ttf2woff2: require("gulp-ttf2woff2"),
     gp: require("gulp-load-plugins")()
 };
 
@@ -27,7 +29,9 @@ $.gulp.task(
             "js:copy",
             "svg",
             "img:dev",
-            "fonts"
+            "fonts",
+            "fonts:woff2",
+            "fonts:woff"
         )
     )
 );
@@ -43,10 +47,11 @@ $.gulp.task(
             "js:copy",
             "svg",
             "img:build",
-            "fonts"
+            "fonts",
+            "fonts:woff2",
+            "fonts:woff"
         )
     )
 );
 
 $.gulp.task("default", $.gulp.series("dev", $.gulp.parallel("watch", "serve")));
-$.gulp.task("back", $.gulp.series("dev", $.gulp.parallel("watch")));
