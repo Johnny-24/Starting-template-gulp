@@ -6,10 +6,7 @@ module.exports = function() {
             $.gulp.series("sass:dev")
         );
         $.gulp.watch("./dev/src/assets/images/svg/*.svg", $.gulp.series("svg"));
-        $.gulp.watch(
-            "./dev/src/assets/js/**/*.js",
-            $.gulp.series("libsJS:dev", "js:copy")
-        );
+        $.gulp.watch("./dev/src/assets/js/**/*.js", $.gulp.series("webpack"));
         $.gulp.watch(
             "./dev/src/assets/images/*.{png,jpg,gif,svg}",
             $.gulp.series("img:dev")

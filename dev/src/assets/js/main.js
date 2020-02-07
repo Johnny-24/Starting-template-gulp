@@ -1,15 +1,5 @@
-$(document).ready(function() {
-    // Plugin svg4everybody
-    svg4everybody({});
+import test from "./modules/test_module";
 
-    // Polifill for IE objectFitImages
-    objectFitImages();
-
-    const a = "Hello";
-
-    let b = () => {
-        console.log(`${a} Johnny!`);
-    };
-
-    b();
+document.addEventListener("DOMContentLoaded", function() {
+    test.run();
 });

@@ -34,7 +34,9 @@
         "gulp-svgmin": "^1.2.4",
         "gulp-ttf2woff": "^1.1.1",
         "gulp-ttf2woff2": "^3.0.0",
-        "gulp-uglifyjs": "^0.6.2"
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10",
+        "webpack-stream": "^5.2.1"
     },
     "dependencies": {
         "object-fit-images": "^3.2.4",
