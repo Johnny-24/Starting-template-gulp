@@ -17,7 +17,7 @@ module.exports = function() {
             .pipe($.gcmq())
             .pipe($.gp.csscomb())
             .pipe($.gp.csso())
-            .pipe($.gulp.dest("./dev/html/assets/css/"));
+            .pipe($.gulp.dest("./dev/dist/assets/css/"));
     });
 
     $.gulp.task("sass:dev", () => {
@@ -45,7 +45,7 @@ module.exports = function() {
                     browsers: ["last 3 version"]
                 })
             )
-            .pipe($.gulp.dest("./dev/html/assets/css/"))
+            .pipe($.gulp.dest("./dev/dist/assets/css/"))
             .pipe(
                 $.browserSync.reload({
                     stream: true

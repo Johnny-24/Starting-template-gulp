@@ -1,5 +1,5 @@
 module.exports = function() {
-  $.gulp.task("clean", function() {
-    return $.del("./dev/html");
-  });
+    $.gulp.task("clean", function() {
+        return $.del("./dev/dist");
+    });
 };

@@ -8,7 +8,7 @@ module.exports = function() {
 
             .pipe($.gp.concat("libs.min.js"))
 
-            .pipe($.gulp.dest("./dev/html/assets/js/"))
+            .pipe($.gulp.dest("./dev/dist/assets/js/"))
 
             .pipe(
                 $.browserSync.reload({
@@ -26,7 +26,7 @@ module.exports = function() {
             .pipe($.gp.concat("libs.min.js"))
 
             .pipe($.gp.uglifyjs())
-            .pipe($.gulp.dest("./dev/html/assets/js/"));
+            .pipe($.gulp.dest("./dev/dist/assets/js/"));
     });
 
     $.gulp.task("js:copy", () => {
@@ -40,7 +40,7 @@ module.exports = function() {
                     presets: ["@babel/env"]
                 })
             )
-            .pipe($.gulp.dest("./dev/html/assets/js/"))
+            .pipe($.gulp.dest("./dev/dist/assets/js/"))
 
             .pipe(
                 $.browserSync.reload({
