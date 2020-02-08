@@ -25,7 +25,6 @@ $.gulp.task(
         $.gulp.parallel(
             "sass:dev",
             "pug",
-            "js:copy",
             "webpack:dev",
             "svg",
             "img:dev",
@@ -43,7 +42,6 @@ $.gulp.task(
         $.gulp.parallel(
             "sass:build",
             "pug",
-            "js:copy",
             "webpack:build",
             "svg",
             "img:build",

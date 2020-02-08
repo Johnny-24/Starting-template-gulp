@@ -7,7 +7,7 @@ module.exports = function() {
         );
         $.gulp.watch("./dev/src/assets/images/svg/*.svg", $.gulp.series("svg"));
         $.gulp.watch(
-            "./dev/src/assets/js/**/*.js",
+            ["./dev/src/assets/js/**/*.js", "./dev/src/assets/js/*.js"],
             $.gulp.series("webpack:dev")
         );
         $.gulp.watch(
