@@ -49,10 +49,17 @@ module.exports = function() {
                 })
             );
     });
-    $.gulp.task("webpack", () => {
+    $.gulp.task("webpack:dev", () => {
         return $.gulp
             .src("./dev/src/assets/js/main.js")
-            .pipe(webpackStream(webpackConfig), webpack)
+            .pipe(webpackStream(webpackConfig.configDev), webpack)
+
+            .pipe($.gulp.dest("./dev/dist/assets/js/"));
+    });
+    $.gulp.task("webpack:build", () => {
+        return $.gulp
+            .src("./dev/src/assets/js/main.js")
+            .pipe(webpackStream(webpackConfig.configBuild), webpack)
 
             .pipe($.gulp.dest("./dev/dist/assets/js/"));
     });
