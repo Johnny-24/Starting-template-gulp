@@ -36,11 +36,6 @@ module.exports = function() {
     $.gulp.task("js:copy", () => {
         return $.gulp
             .src(["./dev/src/assets/js/jquery.js"])
-            .pipe(
-                $.babel({
-                    presets: ["@babel/env"]
-                })
-            )
             .pipe($.gulp.dest("./dev/dist/assets/js/"))
 
             .pipe(

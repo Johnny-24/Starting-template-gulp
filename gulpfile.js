@@ -3,7 +3,6 @@ global.$ = {
         task: require("./gulp/paths/tasks.js")
     },
     gulp: require("gulp"),
-    babel: require("gulp-babel"),
     del: require("del"),
     fs: require("fs"),
     gcmq: require("gulp-group-css-media-queries"),
@@ -11,6 +10,7 @@ global.$ = {
     browserSync: require("browser-sync").create(),
     ttf2woff: require("gulp-ttf2woff"),
     ttf2woff2: require("gulp-ttf2woff2"),
+    favicons: require("gulp-favicons"),
     gp: require("gulp-load-plugins")()
 };
 
@@ -49,7 +49,8 @@ $.gulp.task(
             "img:build",
             "fonts",
             "fonts:woff2",
-            "fonts:woff"
+            "fonts:woff",
+            "favicon-generate"
         )
     )
 );
