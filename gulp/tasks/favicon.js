@@ -1,7 +1,7 @@
 module.exports = function() {
     $.gulp.task("favicon-generate", () => {
         return $.gulp
-            .src("./dev/src/assets/images/favicons/favicon.png")
+            .src("./src/assets/images/favicons/favicon.png")
             .pipe(
                 $.gp.favicons({
                     appName: "My App",
@@ -23,6 +23,6 @@ module.exports = function() {
                     replace: true
                 })
             )
-            .pipe($.gulp.dest("./dev/dist/assets/images/favicons/"));
+            .pipe($.gulp.dest("./dist/assets/images/favicons/"));
     });
 };

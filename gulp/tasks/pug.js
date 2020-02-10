@@ -1,7 +1,7 @@
 module.exports = function() {
     $.gulp.task("pug", () => {
         return $.gulp
-            .src("./dev/src/pug/pages/*.pug")
+            .src("./src/pug/pages/*.pug")
             .pipe(
                 $.gp.pug({
                     pretty: true
@@ -16,7 +16,7 @@ module.exports = function() {
                     };
                 })
             )
-            .pipe($.gulp.dest("./dev/dist/"))
+            .pipe($.gulp.dest("./dist/"))
             .on("end", $.browserSync.reload);
     });
 };

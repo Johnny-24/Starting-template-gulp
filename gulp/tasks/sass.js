@@ -1,7 +1,7 @@
 module.exports = function() {
     $.gulp.task("sass:build", () => {
         return $.gulp
-            .src("./dev/src/assets/scss/main.scss")
+            .src("./src/assets/scss/main.scss")
             .pipe($.gp.sassGlob())
             .pipe(
                 $.gp.sass({
@@ -17,12 +17,12 @@ module.exports = function() {
             .pipe($.gcmq())
             .pipe($.gp.csscomb())
             .pipe($.gp.csso())
-            .pipe($.gulp.dest("./dev/dist/assets/css/"));
+            .pipe($.gulp.dest("./dist/assets/css/"));
     });
 
     $.gulp.task("sass:dev", () => {
         return $.gulp
-            .src("./dev/src/assets/scss/main.scss")
+            .src("./src/assets/scss/main.scss")
             .pipe($.gp.sassGlob())
             .pipe($.gp.sourcemaps.init())
             .pipe(
@@ -45,7 +45,7 @@ module.exports = function() {
                     browsers: ["last 3 version"]
                 })
             )
-            .pipe($.gulp.dest("./dev/dist/assets/css/"))
+            .pipe($.gulp.dest("./dist/assets/css/"))
             .pipe(
                 $.browserSync.reload({
                     stream: true

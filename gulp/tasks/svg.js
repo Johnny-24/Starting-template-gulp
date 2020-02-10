@@ -1,7 +1,7 @@
 module.exports = function() {
     $.gulp.task("svg", () => {
         return $.gulp
-            .src("./dev/src/assets/images/svg/*.svg")
+            .src("./src/assets/images/svg/*.svg")
             .pipe(
                 $.gp.svgmin({
                     js2svg: {
@@ -29,6 +29,6 @@ module.exports = function() {
                     }
                 })
             )
-            .pipe($.gulp.dest("./dev/dist/assets/images/svg/"));
+            .pipe($.gulp.dest("./dist/assets/images/svg/"));
     });
 };

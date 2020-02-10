@@ -3,8 +3,7 @@ const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const configDev = {
     mode: "development",
     entry: {
-        vendors: "./dev/src/assets/js/vendors.js",
-        main: "./dev/src/assets/js/main.js"
+        main: "./src/assets/js/main.js"
     },
     output: {
         filename: "[name].js"
@@ -17,25 +16,14 @@ const configDev = {
                 exclude: "/node_modules/"
             }
         ]
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                commons: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: "vendors",
-                    chunks: "all"
-                }
-            }
-        }
     }
 };
 
 const configBuild = {
     mode: "production",
     entry: {
-        vendors: "./dev/src/assets/js/vendors.js",
-        main: "./dev/src/assets/js/main.js"
+        vendors: "./src/assets/js/vendors.js",
+        main: "./src/assets/js/main.js"
     },
     output: {
         filename: "[name].js"
