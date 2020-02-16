@@ -1,7 +1,6 @@
 @import "utils/*.scss";
-@import "vendors/*.scss";
+@import "vendors/vendors.scss";
 @import "components/*.scss";
-//TODO: Change from normalize to reset
 //TODO: Optimize images
 //TODO: add folders "upload" and "icons" for images
 //TODO: add smart-grid
