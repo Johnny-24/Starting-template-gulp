@@ -5,12 +5,13 @@ global.$ = {
     gulp: require("gulp"),
     del: require("del"),
     fs: require("fs"),
+    babel: require("gulp-babel"),
     gcmq: require("gulp-group-css-media-queries"),
     sassGlob: require("gulp-sass-glob"),
     browserSync: require("browser-sync").create(),
-    ttf2woff: require("gulp-ttf2woff"),
     ttf2woff2: require("gulp-ttf2woff2"),
     favicons: require("gulp-favicons"),
+    insert: require("gulp-insert"),
     gp: require("gulp-load-plugins")()
 };
 
@@ -25,12 +26,13 @@ $.gulp.task(
         $.gulp.parallel(
             "sass:dev",
             "pug",
-            "webpack:dev",
+            "libsJS:dev",
+            "js:copy",
+            "js:modules",
             "svg",
             "img:dev",
             "fonts",
-            "fonts:woff2",
-            "fonts:woff"
+            "fonts:woff2"
         )
     )
 );
@@ -42,12 +44,13 @@ $.gulp.task(
         $.gulp.parallel(
             "sass:build",
             "pug",
-            "webpack:build",
+            "libsJS:build",
+            "js:copy",
+            "js:modules",
             "svg",
             "img:build",
             "fonts",
             "fonts:woff2",
-            "fonts:woff",
             "favicon-generate"
         )
     )
