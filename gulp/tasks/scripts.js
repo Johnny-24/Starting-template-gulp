@@ -3,6 +3,7 @@ module.exports = function() {
         return $.gulp
             .src([
                 "node_modules/svg4everybody/dist/svg4everybody.min.js",
+                "node_modules/inputmask/dist/inputmask.min.js",
                 "node_modules/object-fit-images/dist/ofi.min.js"
             ])
             .pipe($.gp.concat("libs.min.js"))
@@ -18,6 +19,7 @@ module.exports = function() {
         return $.gulp
             .src([
                 "node_modules/svg4everybody/dist/svg4everybody.min.js",
+                "node_modules/inputmask/dist/inputmask.min.js",
                 "node_modules/object-fit-images/dist/ofi.min.js"
             ])
             .pipe($.gp.concat("libs.min.js"))
@@ -48,13 +50,18 @@ module.exports = function() {
 
     $.gulp.task("js:modules", () => {
         return $.gulp
-            .src(["./src/assets/js/modules/*.js", "./src/assets/js/main.js"])
+            .src(["./src/assets/js/main.js", "./src/assets/js/modules/*.js"])
             .pipe($.gp.concat("main.js"))
             .pipe(
                 $.gp.insert.wrap(
                     'document.addEventListener("DOMContentLoaded", function() { \n\n',
                     "});"
                 )
+            )
+            .pipe(
+                $.babel({
+                    presets: ["@babel/env"]
+                })
             )
             .pipe($.gulp.dest("./dist/assets/js/"))
             .pipe(
