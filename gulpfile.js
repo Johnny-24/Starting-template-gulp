@@ -31,8 +31,7 @@ $.gulp.task(
             "js:modules",
             "svg",
             "img:dev",
-            "fonts",
-            "fonts:woff2"
+            "fonts"
         )
     )
 );
@@ -50,7 +49,6 @@ $.gulp.task(
             "svg",
             "img:build",
             "fonts",
-            "fonts:woff2",
             "favicon-generate"
         )
     )
