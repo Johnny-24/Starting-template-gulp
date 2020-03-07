@@ -2,6 +2,7 @@ module.exports = function() {
     $.gulp.task("sass:build", () => {
         return $.gulp
             .src("./src/assets/scss/main.scss")
+            .pipe($.gp.wait(1500))
             .pipe($.gp.sassGlob())
             .pipe(
                 $.gp.sass({
@@ -23,6 +24,7 @@ module.exports = function() {
     $.gulp.task("sass:dev", () => {
         return $.gulp
             .src("./src/assets/scss/main.scss")
+            .pipe($.gp.wait(1500))
             .pipe($.gp.sassGlob())
             .pipe($.gp.sourcemaps.init())
             .pipe(
