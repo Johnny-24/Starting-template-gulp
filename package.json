@@ -19,7 +19,7 @@
         "babel-loader": "^8.0.6",
         "browser-sync": "^2.18.12",
         "del": "^3.0.0",
-        "gulp": "github:gulpjs/gulp#4.0",
+        "gulp": "^4.0.2",
         "gulp-autoprefixer": "^4.0.0",
         "gulp-babel": "^8.0.0",
         "gulp-cheerio": "^0.6.2",
