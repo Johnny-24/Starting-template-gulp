@@ -1,6 +1,6 @@
 global.$ = {
     path: {
-        task: require("./gulp/paths/tasks.js")
+        task: require("./gulp/paths/tasks.js"),
     },
     gulp: require("gulp"),
     del: require("del"),
@@ -12,10 +12,10 @@ global.$ = {
     ttf2woff2: require("gulp-ttf2woff2"),
     favicons: require("gulp-favicons"),
     insert: require("gulp-insert"),
-    gp: require("gulp-load-plugins")()
+    gp: require("gulp-load-plugins")(),
 };
 
-$.path.task.forEach(function(taskPath) {
+$.path.task.forEach(function (taskPath) {
     require(taskPath)();
 });
 
@@ -28,7 +28,6 @@ $.gulp.task(
             "pug",
             "libsJS:dev",
             "js:copy",
-            "js:modules",
             "svg",
             "img:dev",
             "fonts"
@@ -45,7 +44,6 @@ $.gulp.task(
             "pug",
             "libsJS:build",
             "js:copy",
-            "js:modules",
             "svg",
             "img:build",
             "fonts",

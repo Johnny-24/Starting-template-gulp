@@ -1,8 +1,10 @@
-//Common scripts
-const a = "Hello";
+$(document).ready(function () {
+    // Svg for everybody
+    svg4everybody();
 
-let b = () => {
-    console.log(`${a} Johnny!`);
-};
+    // Polifill for IE objectFitImages
+    objectFitImages();
 
-b();
+    // InputMask
+    $(".phoneMask").inputmask("+7(999) 999-99-99");
+});
