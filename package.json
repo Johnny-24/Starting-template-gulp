@@ -45,6 +45,7 @@
 		"gulp-wait": "^0.0.2"
 	},
 	"dependencies": {
+		"@fancyapps/fancybox": "^3.5.7",
 		"inputmask": "^5.0.3",
 		"slick-carousel": "^1.8.1",
 		"object-fit-images": "^3.2.4",

@@ -5,6 +5,7 @@ module.exports = function () {
                 "node_modules/svg4everybody/dist/svg4everybody.min.js",
                 "node_modules/inputmask/dist/jquery.inputmask.min.js",
                 "node_modules/object-fit-images/dist/ofi.min.js",
+                "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
                 "node_modules/slick-carousel/slick/slick.min.js",
             ])
             .pipe($.gp.concat("libs.min.js"))
@@ -22,6 +23,7 @@ module.exports = function () {
                 "node_modules/svg4everybody/dist/svg4everybody.min.js",
                 "node_modules/inputmask/dist/jquery.inputmask.min.js",
                 "node_modules/object-fit-images/dist/ofi.min.js",
+                "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
                 "node_modules/slick-carousel/slick/slick.min.js",
             ])
             .pipe($.gp.concat("libs.min.js"))
