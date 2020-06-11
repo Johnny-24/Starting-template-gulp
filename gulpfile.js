@@ -19,6 +19,10 @@ $.path.task.forEach(function (taskPath) {
     require(taskPath)();
 });
 
+// Generate Favicons
+$.gulp.task("fav", $.gulp.series("favicon-generate"));
+
+// Develoment
 $.gulp.task(
     "dev",
     $.gulp.series(
@@ -35,6 +39,7 @@ $.gulp.task(
     )
 );
 
+// Build
 $.gulp.task(
     "build",
     $.gulp.series(
@@ -46,10 +51,10 @@ $.gulp.task(
             "js:copy",
             "svg",
             "img:build",
-            "fonts",
-            "favicon-generate"
+            "fonts"
         )
     )
 );
 
+// Default Task
 $.gulp.task("default", $.gulp.series("dev", $.gulp.parallel("watch", "serve")));
