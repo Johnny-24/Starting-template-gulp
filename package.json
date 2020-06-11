@@ -46,6 +46,7 @@
 	},
 	"dependencies": {
 		"inputmask": "^5.0.3",
+		"slick-carousel": "^1.8.1",
 		"object-fit-images": "^3.2.4",
 		"reset-css": "^5.0.1",
 		"svg4everybody": "^2.1.8"
