@@ -8,7 +8,11 @@ module.exports = function () {
             $.gulp.series("libsJS:dev", "js:copy")
         );
         $.gulp.watch(
-            "./src/assets/images/*.{png,jpg,gif,svg}",
+            [
+                "./src/assets/images/**/*.{png,jpg,gif,svg}",
+                "!./src/assets/images/svg/*.*",
+                "!./src/assets/images/favicons/*.*",
+            ],
             $.gulp.series("img:dev")
         );
         $.gulp.watch("./src/assets/fonts/**/*.*", $.gulp.series("fonts"));
